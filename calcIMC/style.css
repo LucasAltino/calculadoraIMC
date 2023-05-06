@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    background-color: #76BFAC;
+    height: 200px;
+}
+
+header h1,
+header h3{
+    text-align: center;
+    padding-top: 40px;
+}
+header span{
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#tudo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #ECF3F1;
+    height: 70vh;
+}
+
+#esquerda{
+    margin-left: 50px;
+    margin-top: 40px;
+    background-color: white;
+    width: 600px;
+    border-radius: 20px;
+    height: 350px;
+}
+
+.input{
+    display: grid;
+    margin-left: 100px;
+    grid-template-rows: 1fr 2fr;
+}
+
+.input input{
+    width: 370px;
+    height: 40px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #68A797;
+    margin-bottom: 20px;
+    margin-top: 30px;
+
+}
+
+.input label{
+    height: 0;
+    margin-top: 40px;
+}
+#botoes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 300px;
+    margin-left: 100px;
+}
+#enviar button{
+    padding: 10px;
+    background-color: #009E19;
+    border: none;
+    border-radius: 15px;
+    width: 100px;
+    color: white;
+    cursor: pointer;
+
+}
+
+#apagar button{
+    padding: 10px;
+    background-color: #BE2444;
+    border: none;
+    border-radius: 15px;
+    width: 100px;
+    color: white;
+    cursor: pointer;
+
+}
+#direita{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#direita2{
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    border-radius: 400px;
+    margin-top: 60px;
+    margin-left: 54px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.742);
+}
+#direita2 h3{
+    margin-left: 54px;
+    padding-top: 70px;
+    font-size: 2em;
+    margin-bottom: 50px;
+}
+#direita3{
+    background-color: #76BFAC;
+    width: 200px;
+    height: 200px;
+    border-radius: 400px;
+    margin-top: 160px;
+    margin-left: 20px;
+}
+#direita3 h4{
+    margin-left: 40px;
+    padding-top: 55px;
+    font-size: 1.3em;
+    margin-bottom: 30px;
+
+}
+#direita2 span{
+    margin-left: 120px;
+    margin-top: 20px;
+    font-size: 2.3em;
+}
+
+#direita3 span{
+    font-size: 1.2em;
+    margin-left: 50px;
+
+}

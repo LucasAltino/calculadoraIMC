@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../calcIMC/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Calculadora de IMC</h1>
+        <h3>Faça já o calculo de seu <span> Índice de Massa Corporal !</span></h3>
+    </header>
+
+    <main>
+        <section id="tudo">
+            <div id="esquerda">
+                <form action="" id="formulario">
+                    <div class="input">
+                        <label for="">Digite sua Altura (ex: 1.80)</label>
+                        <input type="text" id="altura">
+                    </div>
+                    <div class="input">
+                        <label for="">Digite seu Peso (ex: 65)</label>
+                        <input type="text" id="peso">
+                    </div>
+                    <div id="botoes">
+                        <div id="enviar"><button type="submit">Enviar</button></div>
+                        <div id="apagar"><button type="reset">Limpar</button></div>
+                    </div>
+                </form>
+            </div>
+            <div id="direita">
+                <div id="direita2">
+                    <h3>Seu IMC é de: </h3>
+                    <span id="result2"></span>
+                </div>
+                <div id="direita3">
+                    <h4>Classificação: </h4>
+                    <span id="result"></span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        var altura = document.getElementById("altura");
+        var peso = document.getElementById("peso");
+        var result = document.getElementById("result")
+        var form = document.getElementById("formulario")
+        var result2 = document.getElementById("result2")
+
+        function IMC(event){
+            event.preventDefault()
+            var classificacao = String
+
+            var valor = parseFloat(altura.value)
+            var valor2 = parseFloat(peso.value)
+            var imc = valor2/(valor*valor)
+            var imc2 = imc
+
+            imc = imc.toFixed(1)
+            imc2 = imc2.toFixed(1)
+
+
+            if (imc < 18.5){
+                classificacao = "Magreza/Baixo"
+            }
+            else if (imc > 18.5 && imc < 24.9){
+                classificacao = "Ideal/Normal"
+            }
+            else if (imc > 25 && imc < 29.9){
+                classificacao = "Sobrepeso"
+            }
+            else if (imc > 30 && imc < 34.9){
+                classificacao = "Obesidade   1"
+            }
+            else if (imc > 35 && imc < 39.9){
+                classificacao = "Obesidade   2"
+            }
+            else{
+                classificacao = "Obesidade   3"
+            }
+
+            result2.innerHTML = imc2
+            result.innerHTML = classificacao
+        }
+
+        function enviaForm(event) {
+            alert("Obrigado pela Preferência :)")
+        }
+        
+        // form.addEventListener("submit", enviaForm)
+
+        form.addEventListener("submit", IMC)
+    </script>
+</body>
+</html>
